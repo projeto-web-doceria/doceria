@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-DocinhosWebApplication<Docinhos-WEB>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "docinhos.Docinhos_WEB.DocinhosWebApplication",
+            "projectName": "Docinhos-WEB",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
