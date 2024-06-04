@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-DocinhosApplication<docinhos>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "docinhos.loja.docinhos.DocinhosApplication",
+            "projectName": "docinhos",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
