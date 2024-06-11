@@ -1,4 +1,4 @@
-package com.docinhos.WebDev.models;
+package com.docinhos.webdev.models;
 
 import java.io.Serializable;
 import java.util.UUID;
@@ -9,7 +9,15 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "perfil")
 public class PerfilModel implements Serializable {
@@ -22,26 +30,5 @@ public class PerfilModel implements Serializable {
 
     @OneToOne(mappedBy = "perfil")
     private UsuarioModel usuario;
-
-    public UUID getIdPerfil() {
-        return idPerfil;
-    }
-    public void setIdPerfil(UUID idPerfil) {
-        this.idPerfil = idPerfil;
-    }
-    public String getNome() {
-        return nome;
-    }
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public UsuarioModel getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(UsuarioModel usuario) {
-        this.usuario = usuario;
-    }
 
 }
