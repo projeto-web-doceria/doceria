@@ -1,17 +1,13 @@
 package com.docinhos.WebDev.models;
 
 import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Set;
 import java.util.UUID;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -24,9 +20,8 @@ public class PerfilModel implements Serializable {
     @Column(nullable = false, unique = false) 
     private String nome;
 
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    @OneToMany(mappedBy = "idUsuario", fetch = FetchType.LAZY)
-    private Set<UsuarioModel> usuario =  new HashSet<>();
+    @OneToOne(mappedBy = "perfil")
+    private UsuarioModel usuario;
 
     public UUID getIdPerfil() {
         return idPerfil;
@@ -40,10 +35,12 @@ public class PerfilModel implements Serializable {
     public void setNome(String nome) {
         this.nome = nome;
     }
-    public Set<UsuarioModel> getUsuario() {
+
+    public UsuarioModel getUsuario() {
         return usuario;
     }
-    public void setUsuario(Set<UsuarioModel> usuario) {
+
+    public void setUsuario(UsuarioModel usuario) {
         this.usuario = usuario;
     }
 
