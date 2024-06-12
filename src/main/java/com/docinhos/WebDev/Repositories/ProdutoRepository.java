@@ -1,4 +1,4 @@
-package com.docinhos.webdev.Repositories;
+package com.docinhos.webdev.repositories;
 
 import java.util.UUID;
 import org.springframework.data.jpa.repository.JpaRepository;
