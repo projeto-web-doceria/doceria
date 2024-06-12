@@ -30,15 +30,15 @@ public class ProdutoModel implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID idProduto;
-    @Column(nullable = false, unique = false)
+    @Column(unique = false)
     private String nome;
-    @Column(nullable = false, unique = false) 
+    @Column(unique = false) 
     private String descricao;
-    @Column(nullable = false, unique = false)
+    @Column(unique = false)
     private float preco;
-    @Column(nullable = false, unique = false)
+    @Column(unique = false)
     private Date dtFabricacao;
-    @Column(nullable = false, unique = false)
+    @Column(unique = false)
     private Date dtValidade;
     
    @ManyToMany(mappedBy = "produto", fetch = FetchType.LAZY)

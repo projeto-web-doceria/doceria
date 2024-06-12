@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista de Produtos</title>
+</head>
+<body>
+    <h1>Lista de Produtos</h1>
+    <div th:if="${produtos != null}">
+        <p>Produtos encontrados: <span th:text="${#lists.size(produtos)}"></span></p>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Preço</th>
+                <th>Data de Fabricação</th>
+                <th>Data de Validade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="produtos : ${produtos}">
+                <td th:text="${produtos.idProduto}">ID</td>
+                <td th:text="${produtos.nome}">Nome</td>
+                <td th:text="${produtos.descricao}">Descrição</td>
+                <td th:text="${produtos.preco}">Preço</td>
+                <td th:text="${#dates.format(produtos.dtFabricacao, 'dd/MM/yyyy')}">Data de Fabricação</td>
+                <td th:text="${#dates.format(produtos.dtValidade, 'dd/MM/yyyy')}">Data de Validade</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

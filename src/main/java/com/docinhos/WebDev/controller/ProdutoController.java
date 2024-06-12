@@ -7,13 +7,12 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.ui.Model;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.docinhos.webdev.dtos.ProdutoRecordDto;
 import com.docinhos.webdev.models.ProdutoModel;
 import com.docinhos.webdev.repositories.ProdutoRepository;
-
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -28,18 +27,25 @@ public class ProdutoController {
     @Autowired
     ProdutoRepository produtoProdutoRepository;
 
-    @PostMapping("/produtos")
+    @PostMapping("/produtos/cadastro")
     public ResponseEntity<ProdutoModel> salvarProduto(@RequestBody @Validated ProdutoRecordDto produtoRecordDto) {
         var produtoModel = new ProdutoModel();
         BeanUtils.copyProperties(produtoRecordDto, produtoModel);
         return ResponseEntity.status(HttpStatus.CREATED).body(produtoProdutoRepository.save(produtoModel));
     }
 
-    @GetMapping("/produtos")
-    public ResponseEntity<List<ProdutoModel>> getAllProdutos() {
-        return ResponseEntity.status(HttpStatus.OK).body(produtoProdutoRepository.findAll());
-    }
+    // @GetMapping("/listarProdutos")
+    // public ResponseEntity<List<ProdutoModel>> getAllProdutos() {
+    //     return ResponseEntity.status(HttpStatus.OK).body(produtoProdutoRepository.findAll());
+    // }
 
+    @GetMapping("/listarProdutos")
+    public String getAllproducts(Model model) {
+        List<ProdutoModel> produtos = produtoProdutoRepository.findAll();
+        model.addAttribute("produtos", produtos);
+        return "listarProdutos";
+    }
+    
     @GetMapping("/produtos/{idProduto}")
     public ResponseEntity<Object> getOneProduto(@PathVariable(value = "idProduto") UUID idProduto) {
         Optional<ProdutoModel> produto0 = produtoProdutoRepository.findById(idProduto);
