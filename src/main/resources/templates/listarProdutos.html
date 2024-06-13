@@ -4,28 +4,27 @@
     <title>Lista de Produtos</title>
 </head>
 <body>
-    <h1>Lista de Produtos</h1>
-    <div th:if="${produtos != null}">
-        <p>Produtos encontrados: <span th:text="${#lists.size(produtos)}"></span></p>
+    <h1>Produtos</h1>
     <table>
         <thead>
             <tr>
                 <th>ID</th>
                 <th>Nome</th>
-                <th>Descrição</th>
                 <th>Preço</th>
+                <th>Descrição</th>
                 <th>Data de Fabricação</th>
                 <th>Data de Validade</th>
+                <!-- Adicione mais cabeçalhos de coluna conforme necessário -->
             </tr>
         </thead>
         <tbody>
-            <tr th:each="produtos : ${produtos}">
-                <td th:text="${produtos.idProduto}">ID</td>
-                <td th:text="${produtos.nome}">Nome</td>
-                <td th:text="${produtos.descricao}">Descrição</td>
-                <td th:text="${produtos.preco}">Preço</td>
-                <td th:text="${#dates.format(produtos.dtFabricacao, 'dd/MM/yyyy')}">Data de Fabricação</td>
-                <td th:text="${#dates.format(produtos.dtValidade, 'dd/MM/yyyy')}">Data de Validade</td>
+            <tr th:each="produto : ${produto}">
+                <td th:text="${produto.idProduto}">ID</td>
+                <td th:text="${produto.nome}">Nome</td>
+                <td th:text="${produto.preco}">Preço</td>
+                <td th:text="${produto.descricao}">Descrição</td>
+                <td th:text="${produto.dtFabricacao}">Data de Fabricação</td>
+                <td th:text="${produto.dtValidade}">Data de Validade</td>
             </tr>
         </tbody>
     </table>
