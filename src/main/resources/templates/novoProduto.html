@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Cadastro de Produto</title>
+    <title>Cadastrar Produto</title>
 </head>
 <body>
-    <h1>Cadastro de Produto</h1>
-    <form th:action="@{/novoProduto}" th:object="${produtoRecordDto}" method="post">
-        <p>Nome: <input type="text" th:field="*{nome}" /></p>
-        <p>Descrição: <input type="text" th:field="*{descricao}" /></p>
-        <p>Preço: <input type="number" th:field="*{preco}" /></p>
-        <p>Data de Fabricação: <input type="date" th:field="*{dtFabricacao}" /></p>
-        <p>Data de Validade: <input type="date" th:field="*{dtValidade}" /></p>
-        <p><input type="submit" value="Submit" /></p>
+    <form method="post" th:object="${produtoDto}" >
+        <p>Nome: <input type="text" required th:field="*{nome}"  /></p>
+        <p>Descrição: <input type="text" required th:field="*{descricao}" /></p>
+        <p>Preço: <input type="number" required th:field="*{preco}" /></p>
+        <p>Data de Fabricação: <input required type="date" th:field="*{dtFabricacao}" /></p>
+        <p>Data de Validade: <input type="date" required th:field="*{dtValidade}" /></p>
+        <p><input type="submit" value="Cadastrar" /></p>
     </form>
 </body>
 </html>
