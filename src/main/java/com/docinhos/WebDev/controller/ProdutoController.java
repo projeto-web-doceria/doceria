@@ -13,14 +13,17 @@ import org.springframework.validation.annotation.Validated;
 import com.docinhos.webdev.dtos.ProdutoRecordDto;
 import com.docinhos.webdev.models.ProdutoModel;
 import com.docinhos.webdev.repositories.ProdutoRepository;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
 
 
 
@@ -30,18 +33,32 @@ public class ProdutoController {
     @Autowired
     ProdutoRepository produtoProdutoRepository;
 
-    @PostMapping("/produtos/cadastro")
-    public ResponseEntity<ProdutoModel> salvarProduto(@ModelAttribute @Validated ProdutoRecordDto produtoRecordDto) {
-        var produtoModel = new ProdutoModel();
-        BeanUtils.copyProperties(produtoRecordDto, produtoModel);
-        return ResponseEntity.status(HttpStatus.CREATED).body(produtoProdutoRepository.save(produtoModel));
+    // @PostMapping("/produtos/cadastro")
+    // public ResponseEntity<ProdutoModel> salvarProduto(@ModelAttribute @Validated ProdutoRecordDto produtoRecordDto) {
+    //     var produtoModel = new ProdutoModel();
+    //     BeanUtils.copyProperties(produtoRecordDto, produtoModel);
+    //     return ResponseEntity.status(HttpStatus.CREATED).body(produtoProdutoRepository.save(produtoModel));
+    // }
+
+    @GetMapping("/criar")
+    public String produtoCriaro(Model model) {
+        ProdutoRecordDto produtoDto = new ProdutoRecordDto(null, null, 0, null, null);
+        model.addAttribute("produtoDto", produtoDto);
+        return "criado";
     }
 
-    // @GetMapping("/listarProdutos")
-    // public ResponseEntity<List<ProdutoModel>> getAllProdutos() {
-    //     return ResponseEntity.status(HttpStatus.OK).body(produtoProdutoRepository.findAll());
-    // }
-    
+    @PostMapping("/novoProduto")
+    public String cadastrarProduto(@ModelAttribute ProdutoRecordDto produtoRecordDto) {
+        ProdutoModel produto = new ProdutoModel();
+        produto.setNome(produtoRecordDto.nome());
+        produto.setDescricao(produtoRecordDto.descricao());
+        produto.setPreco(produtoRecordDto.preco());
+        produto.setDtFabricacao(produtoRecordDto.dtFabricacao());
+        produto.setDtValidade(produtoRecordDto.dtValidade());   
+        produtoProdutoRepository.save(produto);
+        return "redirect:/listarProdutos";
+    }
+
     @GetMapping("/listarProdutos")
      public String getAllproducts(Model model) {
          List<ProdutoModel> produtos = produtoProdutoRepository.findAll();

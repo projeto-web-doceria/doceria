@@ -11,8 +11,4 @@ public class navController {
     public String index() {
         return "index";
     }
-    @GetMapping("/cadastroProduto")
-    public String cadastroProduto(){
-        return "cadastroProduto";
-    }   
 }

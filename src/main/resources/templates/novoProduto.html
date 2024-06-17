@@ -4,7 +4,8 @@
     <title>Cadastro de Produto</title>
 </head>
 <body>
-    <form th:action="@{/cadastroProduto}" th:object="${produtoRecordDto}" method="post">
+    <h1>Cadastro de Produto</h1>
+    <form th:action="@{/novoProduto}" th:object="${produtoRecordDto}" method="post">
         <p>Nome: <input type="text" th:field="*{nome}" /></p>
         <p>Descrição: <input type="text" th:field="*{descricao}" /></p>
         <p>Preço: <input type="number" th:field="*{preco}" /></p>

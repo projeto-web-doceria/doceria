@@ -7,5 +7,4 @@ public record ProdutoRecordDto( String nome,
                                 float preco, 
                                 Date dtFabricacao, 
                                 Date dtValidade) {
-    
 }
