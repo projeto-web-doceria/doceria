@@ -31,7 +31,7 @@ header h1 {
 header nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 10px;
     margin: 0;
     padding: 0;
 }
@@ -44,6 +44,29 @@ header nav ul li a {
 header .busca {
     display: flex;
     justify-content: space-between;
+}
+
+.divBusca {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.btnBusca {
+    width: 15px;
+    height: auto;
+    background-color: #853A30;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.divBusca .perfil, .carro {
+    width: 10px;
+    height: auto;
 }
 
 .hero-container{
@@ -60,6 +83,7 @@ header .busca {
 
 .hero-text {
     max-width: 50%;
+    padding-right: 100px;
 }
 
 .hero h2 {
@@ -70,6 +94,7 @@ header .busca {
 .hero p {
     font-size: 1.2em;
     margin-bottom: 20px;
+    width: 500px;
 }
 
 .hero .buttons a {
@@ -97,26 +122,6 @@ header .busca {
     height: auto;
 }
 
-.carousel {
-    padding: 20px 0;
-}
-
-.carousel-container {
-    display: flex;
-    justify-content: right;
-}
-
-.carousel-content {
-    display: flex;
-    gap: 10px;
-    overflow-x: scroll;
-}
-
-.carousel-content img {
-    max-width: 100%;
-    height: auto;
-}
-
 .best-rated {
     background: linear-gradient(270deg, #F2E0D3 0%, rgba(242, 224, 211, 0.50) 49.97%, #FFF 100%);
     padding: 50px 0;
@@ -130,15 +135,33 @@ header .busca {
 
 .product-grid {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
+    justify-content: space-between;
+    flex-direction: row;
 }
 
 .product {
     text-align: center;
-    flex: 1 1 calc(33.333% - 40px);
     margin: 20px;
+}
+
+.product img{
+    height: 200px;
+    width: 155px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.product .rating{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    box-shadow: none;
+}
+
+.product .rating img{
+    width: 20px;
+    height: 20px;
 }
 
 .best-rated .btn-secondary {
@@ -193,7 +216,7 @@ header .busca {
 
 .cta {
     text-align: center;
-    background: #f2e9e4;
+    background: #F2E0D3;
     padding: 50px 0;
 }
 
@@ -201,6 +224,7 @@ header .busca {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 700px;
 }
 
 .cta .btn-primary {

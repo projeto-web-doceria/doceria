@@ -28,8 +28,8 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#perfil"><img src="../static/img/Perfil.png"></a></li>
-                    <li><a href="#carrinho"><img src="../static/img/Carrinho.png"></a></li>
+                    <li class="perfil"><a href="#perfil"><img src="../static/img/Perfil.png"></a></li>
+                    <li class="carro"><a href="#carrinho"><img src="../static/img/Carrinho.png"></a></li>
                 </ul>
             </nav>
         </div>
@@ -39,24 +39,14 @@
 <section class="hero">
     <div class="container hero-container">
         <div class="hero-text">
-            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
-            <p>Cras justo lectus, tempor non ullamcorper non, facilisis at tortor. Cras dui orci, feugiat ac tellus vitae, ullamcorper commodo justo. Etiam cursus.</p>
+            <h2>Bem-vindo à Docinhos Web!</h2>
+            <p>Descubra os sabores irresistíveis de nossos bolos, brigadeiros e doces caseiros. Feitos com amor e ingredientes selecionados para adoçar seu dia.</p>
             <div class="buttons">
                 <a href="#pedido" class="btn-primary">Faça Seu Pedido</a>
                 <a href="/listarProdutos" class="btn-secondary">Veja Nosso Menu</a>
             </div>
         </div>
-        <img src="../static/img/Bolo.png.jpg" alt="Bolo" class="hero-img">
-
-        <section class="carousel">
-            <div class="container carousel-container">
-                <div class="carousel-content">
-                    <img src="cake1.jpg" alt="Bolo 1">
-                    <img src="cake2.jpg" alt="Bolo 2">
-                    <img src="cake3.jpg" alt="Bolo 3">
-                </div>
-            </div>
-        </section>
+        <img src="../static/img/Bolo.png" alt="Bolo" class="hero-img">
     </div>
 </section>
 
@@ -65,26 +55,53 @@
         <h2>Melhores Avaliados</h2>
         <div class="product-grid">
             <div class="product">
-                <img src="cake4.jpg" alt="Bolo 4">
-                <h3>Lorem ipsum dolor sit amet (500g)</h3>
-                <p>5.0 rating</p>
+                <img src="../static/img/Bolo1.png" alt="Bolo de Chocolate">
+                <h3>Bolo de Chocolate (500g)</h3>
+                <div class="rating">
+                    <img src="../static/img/Estrela.png" alt="Estrela">
+                    <img src="../static/img/Estrela.png" alt="Estrela">
+                    <img src="../static/img/Estrela.png" alt="Estrela">
+                    <img src="../static/img/Estrela.png" alt="Estrela">
+                    <img src="../static/img/Estrela.png" alt="Estrela">
+                    <p>5.0 rating</p>
+                </div>
             </div>
             <div class="product">
-                <img src="cake5.jpg" alt="Bolo 5">
-                <h3>Lorem ipsum dolor sit amet (500g)</h3>
-                <p>5.0 rating</p>
+                <img src="../static/img/Bolo2.png" alt="Bolo de Morango">
+                <h3>Bolo de Morango (500g)</h3>
+                <div class="rating">
+                    <img src="../static/img/Estrela.png" alt="Estrela">
+                    <img src="../static/img/Estrela.png" alt="Estrela">
+                    <img src="../static/img/Estrela.png" alt="Estrela">
+                    <img src="../static/img/Estrela.png" alt="Estrela">
+                    <img src="../static/img/Estrela.png" alt="Estrela">
+                    <p>5.0 rating</p>
+                </div>
             </div>
             <div class="product">
-                <img src="cake4.jpg" alt="Bolo 4">
-                <h3>Lorem ipsum dolor sit amet (500g)</h3>
-                <p>5.0 rating</p>
+                <img src="../static/img/Bolo3.png" alt="Bolo de Cenoura">
+                <h3>Bolo de Cenoura (500g)</h3>
+                <div class="rating">
+                    <img src="../static/img/Estrela.png" alt="Estrela">
+                    <img src="../static/img/Estrela.png" alt="Estrela">
+                    <img src="../static/img/Estrela.png" alt="Estrela">
+                    <img src="../static/img/Estrela.png" alt="Estrela">
+                    <img src="../static/img/Estrela.png" alt="Estrela">
+                    <p>5.0 rating</p>
+                </div>
             </div>
             <div class="product">
-                <img src="cake5.jpg" alt="Bolo 5">
-                <h3>Lorem ipsum dolor sit amet (500g)</h3>
-                <p>5.0 rating</p>
+                <img src="../static/img/Bolo4.png" alt="Bolo de Limão">
+                <h3>Bolo de Limão (500g)</h3>
+                <div class="rating">
+                    <img src="../static/img/Estrela.png" alt="Estrela">
+                    <img src="../static/img/Estrela.png" alt="Estrela">
+                    <img src="../static/img/Estrela.png" alt="Estrela">
+                    <img src="../static/img/Estrela.png" alt="Estrela">
+                    <img src="../static/img/Estrela.png" alt="Estrela">
+                    <p>5.0 rating</p>
+                </div>
             </div>
-            <!-- Adicione mais produtos conforme necessário -->
         </div>
         <a href="/listarProdutos" class="btn-secondary">Veja Mais</a>
     </div>
@@ -94,8 +111,8 @@
     <div class="container">
         <div class="content">
             <div class="text-content">
-                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
-                <p>Cras justo lectus, tempor non ullamcorper non, facilisis at tortor. Cras dui orci, feugiat ac tellus vitae, ullamcorper commodo justo. Etiam cursus.</p>
+                <h2>Nossos Sabores Artesanais</h2>
+                <p>Deixe-se encantar pelos nossos doces artesanais, feitos com receitas tradicionais e um toque de modernidade. Cada mordida é uma experiência única.</p>
                 <a href="#saiba-mais" class="btn-secondary">Saiba Mais</a>
             </div>
             <img src="../static/img/Boleira.png" alt="Chef">
@@ -103,8 +120,8 @@
         <div class="content">
             <img src="../static/img/Boleira2.png" alt="Chef">
             <div class="text-content">
-                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
-                <p>Cras justo lectus, tempor non ullamcorper non, facilisis at tortor. Cras dui orci, feugiat ac tellus vitae, ullamcorper commodo justo. Etiam cursus.</p>
+                <h2>Paixão pela Confeitaria</h2>
+                <p>Nossos confeiteiros são apaixonados pelo que fazem, e isso se reflete em cada detalhe dos nossos produtos. Venha conhecer e se apaixonar também.</p>
                 <a href="#saiba-mais" class="btn-secondary">Saiba Mais</a>
             </div>
         </div>
@@ -113,8 +130,8 @@
 
 <section class="cta">
     <div class="container cta-container">
-        <h2>Lorem ipsum dolor 1 KG</h2>
-        <p>Cras justo lectus, tempor non ullamcorper non, facilisis at tortor. Cras dui orci, feugiat ac tellus vitae, ullamcorper commodo justo.</p>
+        <h2>Delícias de 1 KG</h2>
+        <p>Perfeitos para festas e celebrações, nossos bolos de 1 KG são a escolha ideal para compartilhar momentos doces com quem você ama.</p>
         <a href="#contato" class="btn-primary">Entre em Contato Conosco</a>
     </div>
 </section>
@@ -123,8 +140,8 @@
     <div class="container testimonials-container">
         <h2>Reviews</h2>
         <blockquote>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo lectus, tempor non ullamcorper non, facilisis at tortor.</p>
-            <img src="/static/img/Usuario.png">
+            <p>Os melhores doces que já provei! O bolo de chocolate é simplesmente divino. Recomendo a todos.</p>
+            <img src="/static/img/Usuario.png" alt="João Marcelo">
             <cite>João Marcelo, Cliente</cite>
         </blockquote>
     </div>
@@ -150,27 +167,14 @@
             <p>© 2024 Docinhos web. Todos os direitos reservados.</p>
             <nav>
                 <ul>
-                    <li><a href="#facebook"><img src="/static/img/Facebook.png"></a></li>
-                    <li><a href="#X"><img src="/static/img/TwitterX.png"></a></li>
-                    <li><a href="#Instagram"><img src="../static/img/Instagram.png"></a></li>
-                    <li><a href="#Linkedin"><img src="../static/img/LinkedIn.png"></a></li>
+                    <li><a href="#facebook"><img src="/static/img/Facebook.png" alt="Facebook"></a></li>
+                    <li><a href="#X"><img src="/static/img/TwitterX.png" alt="Twitter"></a></li>
+                    <li><a href="#Instagram"><img src="../static/img/Instagram.png" alt="Instagram"></a></li>
+                    <li><a href="#Linkedin"><img src="../static/img/LinkedIn.png" alt="LinkedIn"></a></li>
                 </ul>
             </nav>
         </div>
     </div>
 </footer>
-
-<div class="container">
-    <h1>Bem-vindo à nossa Loja de Doces!</h1>
-    <p>Explore nossas deliciosas opções:</p>
-    <ul>
-        <li> <a href="produtos">Bolos</a></li>
-        <li>Brigadeiros</li>
-        <li>Doces caseiros</li>
-        <li>Cadastrar Produto</li>
-    </ul>
-    <a href="/listarProdutos">Ver todos os produtos</a><br>
-    <a href="/novoProduto"> Cadastrar Produto </a>
-</div>
 </body>
 </html>
