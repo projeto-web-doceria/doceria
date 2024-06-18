@@ -16,7 +16,7 @@
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="/listarProdutos">Produtos</a></li>
                 <li><a href="#sobre-nos">Sobre nós</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
@@ -36,29 +36,29 @@
     </div>
 </header>
 
-    <section class="hero">
-        <div class="container hero-container">
-            <div class="hero-text">
-                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
-                <p>Cras justo lectus, tempor non ullamcorper non, facilisis at tortor. Cras dui orci, feugiat ac tellus vitae, ullamcorper commodo justo. Etiam cursus.</p>
-                <div class="buttons">
-                    <a href="#pedido" class="btn-primary">Faça Seu Pedido</a>
-                    <a href="#menu" class="btn-secondary">Veja Nosso Menu</a>
+<section class="hero">
+    <div class="container hero-container">
+        <div class="hero-text">
+            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+            <p>Cras justo lectus, tempor non ullamcorper non, facilisis at tortor. Cras dui orci, feugiat ac tellus vitae, ullamcorper commodo justo. Etiam cursus.</p>
+            <div class="buttons">
+                <a href="#pedido" class="btn-primary">Faça Seu Pedido</a>
+                <a href="/listarProdutos" class="btn-secondary">Veja Nosso Menu</a>
+            </div>
+        </div>
+        <img src="../img/Bolo.png.jpg" alt="Bolo" class="hero-img">
+
+        <section class="carousel">
+            <div class="container carousel-container">
+                <div class="carousel-content">
+                    <img src="cake1.jpg" alt="Bolo 1">
+                    <img src="cake2.jpg" alt="Bolo 2">
+                    <img src="cake3.jpg" alt="Bolo 3">
                 </div>
             </div>
-            <img src="../img/Bolo.png.jpg" alt="Bolo" class="hero-img">
-
-            <section class="carousel">
-                <div class="container carousel-container">
-                    <div class="carousel-content">
-                        <img src="cake1.jpg" alt="Bolo 1">
-                        <img src="cake2.jpg" alt="Bolo 2">
-                        <img src="cake3.jpg" alt="Bolo 3">
-                    </div>
-                </div>
-            </section>
-        </div>
-    </section>
+        </section>
+    </div>
+</section>
 
 <section class="best-rated">
     <div class="container">
@@ -74,9 +74,19 @@
                 <h3>Lorem ipsum dolor sit amet (500g)</h3>
                 <p>5.0 rating</p>
             </div>
+            <div class="product">
+                <img src="cake4.jpg" alt="Bolo 4">
+                <h3>Lorem ipsum dolor sit amet (500g)</h3>
+                <p>5.0 rating</p>
+            </div>
+            <div class="product">
+                <img src="cake5.jpg" alt="Bolo 5">
+                <h3>Lorem ipsum dolor sit amet (500g)</h3>
+                <p>5.0 rating</p>
+            </div>
             <!-- Adicione mais produtos conforme necessário -->
         </div>
-        <a href="#mais" class="btn-secondary">Veja Mais</a>
+        <a href="/listarProdutos" class="btn-secondary">Veja Mais</a>
     </div>
 </section>
 
@@ -88,10 +98,10 @@
                 <p>Cras justo lectus, tempor non ullamcorper non, facilisis at tortor. Cras dui orci, feugiat ac tellus vitae, ullamcorper commodo justo. Etiam cursus.</p>
                 <a href="#saiba-mais" class="btn-secondary">Saiba Mais</a>
             </div>
-            <img src="chef.jpg" alt="Chef">
+            <img src="../img/Boleira.png" alt="Chef">
         </div>
         <div class="content">
-            <img src="chef2.jpg" alt="Chef">
+            <img src="../img/Boleira2.png" alt="Chef">
             <div class="text-content">
                 <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
                 <p>Cras justo lectus, tempor non ullamcorper non, facilisis at tortor. Cras dui orci, feugiat ac tellus vitae, ullamcorper commodo justo. Etiam cursus.</p>
@@ -114,6 +124,7 @@
         <h2>Reviews</h2>
         <blockquote>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo lectus, tempor non ullamcorper non, facilisis at tortor.</p>
+            <img src="../img/Usuario.png">
             <cite>João Marcelo, Cliente</cite>
         </blockquote>
     </div>
@@ -121,18 +132,31 @@
 
 <footer>
     <div class="container footer-container">
-        <p>© 2024 Docinhos web. Todos os direitos reservados.</p>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#produtos">Produtos</a></li>
-                <li><a href="#sobre-nos">Sobre nós</a></li>
-                <li><a href="#contato">Contato</a></li>
-                <li><a href="#trabalhe-conosco">Trabalhe conosco</a></li>
-                <li><a href="#ajuda">Ajuda</a></li>
-                <li><a href="#privacidade">Privacidade</a></li>
-            </ul>
-        </nav>
+        <div class="foot-up">
+            <h1>Docinhos web</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#sobre-nos">Sobre nós</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#trabalhe-conosco">Trabalhe conosco</a></li>
+                    <li><a href="#ajuda">Ajuda</a></li>
+                    <li><a href="#privacidade">Privacidade</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="foot-down">
+            <p>© 2024 Docinhos web. Todos os direitos reservados.</p>
+            <nav>
+                <ul>
+                    <li><a href="#facebook"><img src="../img/Facebook.png"></a></li>
+                    <li><a href="#X"><img src="../img/TwitterX.png"></a></li>
+                    <li><a href="#Instagram"><img src="../img/Instagram.png"></a></li>
+                    <li><a href="#Linkedin"><img src="../img/LinkedIn.png"></a></li>
+                </ul>
+            </nav>
+        </div>
     </div>
 </footer>
 
