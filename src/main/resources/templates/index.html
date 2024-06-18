@@ -4,34 +4,149 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link th:href="@{style/style.css}" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <title>Docinhos web</title>
 </head>
 <body>
-    <div class="header">
+<header>
+    <div class="container header-container">
         <h1>Docinhos web</h1>
-        <ul class="links">
-            <li>Home</li>
-            <li> Produtos</li>
-            <li>Sobre nós</li>
-            <li>Contato</li>
-        </ul>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#sobre-nos">Sobre nós</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
         <div class="busca">
-            <input type="text" class="txtBusca" placeholder="Buscar..."/>
-            <img src="search3.png" id="btnBusca" alt="Buscar"/>
+            <div class="divBusca">
+                <input type="text" class="txtBusca" placeholder="Buscar..."/>
+                <img src="../img/Lupa.png" class="btnBusca" alt="Buscar"/>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#perfil"><img src="../img/Perfil.png"></a></li>
+                    <li><a href="#carrinho"><img src="../img/Carrinho.png"></a></li>
+                </ul>
+            </nav>
         </div>
     </div>
+</header>
 
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-text">
+                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+                <p>Cras justo lectus, tempor non ullamcorper non, facilisis at tortor. Cras dui orci, feugiat ac tellus vitae, ullamcorper commodo justo. Etiam cursus.</p>
+                <div class="buttons">
+                    <a href="#pedido" class="btn-primary">Faça Seu Pedido</a>
+                    <a href="#menu" class="btn-secondary">Veja Nosso Menu</a>
+                </div>
+            </div>
+            <img src="../img/Bolo.png.jpg" alt="Bolo" class="hero-img">
+
+            <section class="carousel">
+                <div class="container carousel-container">
+                    <div class="carousel-content">
+                        <img src="cake1.jpg" alt="Bolo 1">
+                        <img src="cake2.jpg" alt="Bolo 2">
+                        <img src="cake3.jpg" alt="Bolo 3">
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+<section class="best-rated">
     <div class="container">
-        <h1>Bem-vindo à nossa Loja de Doces!</h1>
-        <p>Explore nossas deliciosas opções:</p>
-        <ul>
-            <li> <a href="produtos">Bolos</a></li>
-            <li>Brigadeiros</li>
-            <li>Doces caseiros</li>
-          <li>Cadastrar Produto</li>
-        </ul>
-        <a href="/listarProdutos">Ver todos os produtos</a><br>
-        <a href="/novoProduto"> Cadastrar Produto </a>
+        <h2>Melhores Avaliados</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="cake4.jpg" alt="Bolo 4">
+                <h3>Lorem ipsum dolor sit amet (500g)</h3>
+                <p>5.0 rating</p>
+            </div>
+            <div class="product">
+                <img src="cake5.jpg" alt="Bolo 5">
+                <h3>Lorem ipsum dolor sit amet (500g)</h3>
+                <p>5.0 rating</p>
+            </div>
+            <!-- Adicione mais produtos conforme necessário -->
+        </div>
+        <a href="#mais" class="btn-secondary">Veja Mais</a>
     </div>
+</section>
+
+<section class="additional-content">
+    <div class="container">
+        <div class="content">
+            <div class="text-content">
+                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+                <p>Cras justo lectus, tempor non ullamcorper non, facilisis at tortor. Cras dui orci, feugiat ac tellus vitae, ullamcorper commodo justo. Etiam cursus.</p>
+                <a href="#saiba-mais" class="btn-secondary">Saiba Mais</a>
+            </div>
+            <img src="chef.jpg" alt="Chef">
+        </div>
+        <div class="content">
+            <img src="chef2.jpg" alt="Chef">
+            <div class="text-content">
+                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+                <p>Cras justo lectus, tempor non ullamcorper non, facilisis at tortor. Cras dui orci, feugiat ac tellus vitae, ullamcorper commodo justo. Etiam cursus.</p>
+                <a href="#saiba-mais" class="btn-secondary">Saiba Mais</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container cta-container">
+        <h2>Lorem ipsum dolor 1 KG</h2>
+        <p>Cras justo lectus, tempor non ullamcorper non, facilisis at tortor. Cras dui orci, feugiat ac tellus vitae, ullamcorper commodo justo.</p>
+        <a href="#contato" class="btn-primary">Entre em Contato Conosco</a>
+    </div>
+</section>
+
+<section class="testimonials">
+    <div class="container testimonials-container">
+        <h2>Reviews</h2>
+        <blockquote>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo lectus, tempor non ullamcorper non, facilisis at tortor.</p>
+            <cite>João Marcelo, Cliente</cite>
+        </blockquote>
+    </div>
+</section>
+
+<footer>
+    <div class="container footer-container">
+        <p>© 2024 Docinhos web. Todos os direitos reservados.</p>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#sobre-nos">Sobre nós</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#trabalhe-conosco">Trabalhe conosco</a></li>
+                <li><a href="#ajuda">Ajuda</a></li>
+                <li><a href="#privacidade">Privacidade</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+
+<div class="container">
+    <h1>Bem-vindo à nossa Loja de Doces!</h1>
+    <p>Explore nossas deliciosas opções:</p>
+    <ul>
+        <li> <a href="produtos">Bolos</a></li>
+        <li>Brigadeiros</li>
+        <li>Doces caseiros</li>
+        <li>Cadastrar Produto</li>
+    </ul>
+    <a href="/listarProdutos">Ver todos os produtos</a><br>
+    <a href="/novoProduto"> Cadastrar Produto </a>
+</div>
 </body>
 </html>
