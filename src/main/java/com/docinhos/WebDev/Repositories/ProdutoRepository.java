@@ -8,5 +8,4 @@ import com.docinhos.webdev.models.ProdutoModel;
 
 @Repository
 public interface ProdutoRepository extends JpaRepository<ProdutoModel, UUID> {
-    
 }

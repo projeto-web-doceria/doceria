@@ -30,35 +30,33 @@
           </div>
         </div>
       </header>
-    <h3>Nossas Delícias</h3>
+    <h3>Usuários Cadastrados</h3>
     <table class="product-table">
         <thead>
             <tr> 
                 <th>Nome</th>
-                <th>Preço</th>
-                <th>Descrição</th>
-                <th>Data de Fabricação</th>
-                <th>Data de Validade</th>
-                <th>Ações</th>
+                <th>CPF</th>
+                <th>Telefone</th>
+                <th>Endereço</th>
+                <th>Email</th>
             </tr>
         </thead>
         <tbody>
-            <tr th:each="produto : ${produto}">
-                <td th:text="${produto.nome}">Nome</td>
-                <td th:text="${produto.preco}">Preço</td>
-                <td th:text="${produto.descricao}">Descrição</td>
-                <td th:text="${produto.dtFabricacao}">Data de Fabricação</td>
-                <td th:text="${produto.dtValidade}">Data de Validade</td>
+            <tr th:each="usuario : ${usuario}">
+                <td th:text="${usuario.nome}">Nome</td>
+                <td th:text="${usuario.cpf}">CPF</td>
+                <td th:text="${ususario.telefone}">Telefone</td>
+                <td th:text="${ususario.email}">E-mail</td>
                 <td>
-                    <a th:href="@{editarProduto/{idProduto}(idProduto=${produto.idProduto})}">Alterar Prdouto</a>
-                    <a th:href="@{/{idProduto}(idProduto=${produto.idProduto})}">Excluir</a>
-                    <button class="botao-2">Adicionar ao Carrinho</button>
+                    <a th:href="@{editUser/{idUsusario}(idUsusario=${usuario.idUsusario})}">Alterar Usuario</a>
+                    <a th:href="@{deleteUser/{idUsusario}(idUsusario=${usuario.idUsusario})}">Excluir</a>
                 </td>
             </tr>
             <tr>
-              <td>    
-                <a href="/novoProduto">
-                  <button class="botao-edit">Cadastrar Produto</button>
+              <td>   
+                <br> 
+                <a href="/novoUsusario">
+                  <button class="botao-edit">Cadastrar Usuário</button>
                </a>
               </td>
             </tr>

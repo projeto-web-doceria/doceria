@@ -310,3 +310,91 @@ footer nav ul li a {
 .foot-down p {
     font-size: 10px;
 }
+
+/* Estilo para a tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff; /* Cor de fundo branca */
+    border: 1,5px solid #292020; /* Borda cinza claro */
+}
+
+/* Estilo para as células do cabeçalho (th) */
+th {
+    background-color: #853A30; /* Rosa claro */
+    color: #fff; /* Texto branco */
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #e0e0e0;
+}
+
+/* Estilo para as células de dados (td) */
+td {
+    background-color: #f4d9c6; /* Marrom claro */
+    color: #423d3d; /* Texto preto */
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+}
+
+/* Estilo para linhas alternadas (opcional) */
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Cinza claro */
+}
+table .botao-edit {
+    background: #853A30;
+    color: white;
+    border-radius: 2px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+table .botao-2 {
+    background: #ffffff;
+    color: #333;
+    box-shadow: 0 0 0 1px #853A30;
+    border-radius: 2px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilo para o formulário de cadastro do produto */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para os campos de entrada */
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+    width: 97%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+/* Estilo para o botão de cadastro */
+input[type="submit"] {
+    background-color: #ff99cc; /* Rosa claro */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #ff6699; /* Rosa mais escuro ao passar o mouse */
+}
