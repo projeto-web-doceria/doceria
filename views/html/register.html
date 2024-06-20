@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/register.css" rel="stylesheet">
+    <title>Registro - Docinhos Web</title>
+</head>
+<body>
+    <div class="register-container">
+        <div class="register-left">
+            <h1>Docinhos Web</h1>
+            <img src="/images/cake.png" alt="Bolo" class="register-img">
+            <h2>Doces Feitos com Amor</h2>
+            <p>Nossos doces são feitos com os melhores ingredientes e muito carinho para adoçar o seu dia. Venha conhecer nossas delícias e se encantar!</p>
+        </div>
+        <div class="register-right">
+            <div class="register-header">
+                <a href="#">Página Inicial</a>
+                <p>Já é inscrito? <a href="/html/login.html">Faça Login</a></p>
+            </div>
+            <h3>SEJA UM MEMBRO</h3>
+            <p>SE INSCREVA E JUNTE-SE A NOSSA COMUNIDADE</p>
+            <form id="register-form">
+                <div class="input-group">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" name="name" placeholder="Fulano de Tal" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="exemplo@email.com" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="password" placeholder="*********" required>
+                </div>
+                <button type="submit">Seja um Membro</button>
+            </form>
+        </div>
+    </div>
+    <script src="/js/register.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/list-products.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <title>Produtos - Docinhos Web</title>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <h1>Docinhos Web</h1>
+            <nav>
+                <ul>
+                    <li><a href="/html/landing.html">Home</a></li>
+                    <li><a href="/html/list-products.html">Produtos</a></li>
+                    <li><a href="#sobre-nos">Sobre nós</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="busca">
+                <div class="divBusca">
+                    <input type="text" class="txtBusca" placeholder="Buscar..."/>
+                    <img src="/images/Lupa.png" class="btnBusca" alt="Buscar"/>
+                </div>
+                <nav>
+                    <ul>
+                        <li class="perfil"><a href="#perfil"><img src="/images/Perfil.png"></a></li>
+                        <li class="carro"><a href="#carrinho"><img src="/images/Carrinho.png"></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="product-grid" id="product-list">
+            <!-- Os produtos serão carregados aqui pelo JavaScript -->
+        </div>
+        <div class="crud-link">
+            <a href="/html/manage-products.html">Gerenciar Produtos</a>
+        </div>
+    </main>
+    <script src="/js/list-products.js"></script>
+</body>
+</html>

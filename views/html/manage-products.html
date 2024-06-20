@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/manage-products.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <title>Gerenciar Produtos - Docinhos Web</title>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <h1>Docinhos Web</h1>
+            <nav>
+                <ul>
+                    <li><a href="/html/landing.html">Home</a></li>
+                    <li><a href="/html/list-products.html">Produtos</a></li>
+                    <li><a href="#sobre-nos">Sobre nós</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="busca">
+                <div class="divBusca">
+                    <input type="text" class="txtBusca" placeholder="Buscar..."/>
+                    <img src="/images/Lupa.png" class="btnBusca" alt="Buscar"/>
+                </div>
+                <nav>
+                    <ul>
+                        <li class="perfil"><a href="#perfil"><img src="/images/Perfil.png"></a></li>
+                        <li class="carro"><a href="#carrinho"><img src="/images/Carrinho.png"></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h2>Gerenciar Produtos</h2>
+            <div class="product-grid" id="product-list">
+                <!-- Os produtos serão carregados aqui pelo JavaScript -->
+            </div>
+            <div id="add-product-form">
+                <h3>Adicionar Produto</h3>
+                <form id="add-form">
+                    <div class="input-group">
+                        <label for="add-product-name">Nome:</label>
+                        <input type="text" id="add-product-name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="add-product-description">Descrição:</label>
+                        <input type="text" id="add-product-description" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="add-product-price">Preço:</label>
+                        <input type="number" id="add-product-price" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="add-product-image">Imagem:</label>
+                        <input type="text" id="add-product-image" required>
+                    </div>
+                    <button type="submit">Adicionar Produto</button>
+                </form>
+            </div>
+            <div id="edit-product-form" style="display:none;">
+                <h3>Editar Produto</h3>
+                <form id="edit-form">
+                    <input type="hidden" id="edit-product-id">
+                    <div class="input-group">
+                        <label for="edit-product-name">Nome:</label>
+                        <input type="text" id="edit-product-name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="edit-product-description">Descrição:</label>
+                        <input type="text" id="edit-product-description" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="edit-product-price">Preço:</label>
+                        <input type="number" id="edit-product-price" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="edit-product-image">Imagem:</label>
+                        <input type="text" id="edit-product-image" required>
+                    </div>
+                    <button type="submit">Salvar</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="/js/manage-products.js"></script>
+</body>
+</html>
