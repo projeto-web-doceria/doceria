@@ -45,7 +45,8 @@ document.getElementById('register-form').addEventListener('submit', async (e) =>
         alert(userId ? 'Usuário atualizado com sucesso!' : 'Usuário registrado com sucesso!');
         window.location.href = '/html/login.html';
     } else {
-        alert('Erro ao processar a solicitação.');
+        const errorData = await response.json();
+        alert(`Erro ao processar a solicitação: ${errorData.message}`);
     }
 });
 

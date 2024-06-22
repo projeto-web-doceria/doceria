@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const productList = document.getElementById('product-list');
         productList.innerHTML = products.map(product => `
             <div class="product">
-                <img src="/images/products/${product.image}" alt="${product.name}">
+                <img src="${product.image}" alt="${product.name}">
                 <h3>${product.name} (${product.weight})</h3>
                 <p>${product.description}</p>
                 <p>R$ ${product.price}</p>
@@ -62,6 +62,7 @@ const editProduct = (id, name, description, price, image) => {
     document.getElementById('edit-product-price').value = price;
     document.getElementById('edit-product-image').value = image;
     document.getElementById('edit-product-form').style.display = 'block';
+    document.getElementById('add-product-form').style.display = 'none';
 };
 
 document.getElementById('edit-form').addEventListener('submit', async (e) => {
