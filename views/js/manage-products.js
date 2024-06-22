@@ -1,4 +1,3 @@
-// /project-root/views/js/manage-products.js
 document.addEventListener('DOMContentLoaded', async () => {
     const token = localStorage.getItem('token');
 

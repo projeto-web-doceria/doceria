@@ -1,4 +1,3 @@
-// /project-root/views/js/register.js
 const validateForm = () => {
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;

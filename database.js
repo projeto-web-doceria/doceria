@@ -1,6 +1,5 @@
-// /project-root/database.js
 const sqlite3 = require('sqlite3').verbose();
-const db = new sqlite3.Database('docinhos.db');  // Banco de dados persistente
+const db = new sqlite3.Database('docinhos.db');
 
 const initDB = () => {
     db.serialize(() => {
